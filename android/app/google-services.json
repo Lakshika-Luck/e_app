@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "361749885391",
+    "firebase_url": "https://ecollege-5f23d.firebaseio.com",
+    "project_id": "ecollege-5f23d",
+    "storage_bucket": "ecollege-5f23d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:361749885391:android:26575b291e14e5664da2ba",
+        "android_client_info": {
+          "package_name": "com.example.e_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "361749885391-042elnius74q0orujdugo5ao5a22gtnj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCB5qiNb_SikWu3C3AqUMJmMdKhD1jwhDM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "361749885391-042elnius74q0orujdugo5ao5a22gtnj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
