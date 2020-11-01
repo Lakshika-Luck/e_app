@@ -12,14 +12,21 @@ class SignUpScreen extends StatefulWidget {
 }
 
 class _SignUpScreen extends State<SignUpScreen> {
+  bool authState = false;
   String email = "", password = "";
   var _formKey = GlobalKey<FormState>();
 
   FirebaseAuth auth = FirebaseAuth.instance;
 
   Future<void> register() async {
-    FirebaseUser user = (await auth.createUserWithEmailAndPassword(
-        email: email.trim(), password: password)) as FirebaseUser;
+    await auth
+        .createUserWithEmailAndPassword(email: email.trim(), password: password)
+        .then((value) {
+      Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (BuildContext context) => HomeScreen(value.user.email)));
+    });
   }
 
   @override
@@ -187,10 +194,6 @@ class _SignUpScreen extends State<SignUpScreen> {
                   onPressed: () {
                     if (_formKey.currentState.validate()) {
                       register();
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (BuildContext context) => HomeScreen()));
                     }
                   },
                   shape: RoundedRectangleBorder(
