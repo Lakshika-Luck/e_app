@@ -1,4 +1,8 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+import 'LogInScreen.dart';
 
 class SplashScreen extends StatefulWidget {
   State<StatefulWidget> createState() {
@@ -45,8 +49,22 @@ class _SplashScreen extends State<SplashScreen> {
       ),
     );
   }
-}
+
 //navigate to the login page
+
+  void NavigateToLogIn() {
+    Timer(
+        Duration(seconds: 5),
+        () => Navigator.of(context).pushReplacement(MaterialPageRoute(
+            builder: (BuildContext context) => LogInScreen())));
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    NavigateToLogIn();
+  }
+}
 
 class MyImage extends StatelessWidget {
   @override
